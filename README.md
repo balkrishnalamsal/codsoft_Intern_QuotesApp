@@ -1,6 +1,17 @@
-# quotesapp
+# Quotes App
 
-A new Flutter project.
+
+Project : Working in Progress...
+
+Features :
+
+- Fetch quotes from api and show in app.
+- Share quotes in social media.
+- Show the favourite quotes in New Screen.
+- Refresh page to get new quotes.
+  
+
+
 
 ## Getting Started
 
