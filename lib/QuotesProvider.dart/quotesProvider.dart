@@ -8,7 +8,7 @@ import 'package:quotesapp/Model/model.dart';
 class quotesprovider extends ChangeNotifier {
   Map quotesmap = {};
 
-  List<model> qouteslist=[];
+  List<ModelQuotes> qouteslist=[];
 
   FetchQuotesApi() async {
     http.get(Uri.parse("https://zenquotes.io/api/quotes")).then((value) {
@@ -18,7 +18,7 @@ class quotesprovider extends ChangeNotifier {
         quotesmap.addAll(element);
 
 
-      qouteslist.add(model(element["q"], element["a"]));
+      qouteslist.add(ModelQuotes.fromMap(element));
 
     
       });

@@ -45,13 +45,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
-                                    todo.qouteslist[index].quotes!,
+                                    todo.qouteslist[index]!.q,
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                 ))),
 
-             Text("- "+todo.qouteslist[index].author!),
+             Text("- "+todo.qouteslist[index].a!),
 
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
