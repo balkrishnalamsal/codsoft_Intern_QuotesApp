@@ -1,7 +1,7 @@
 # Quotes App
 
 
-Project : Working in Progress...
+Project : Completed
 
 Features :
 
@@ -10,6 +10,8 @@ Features :
 - Show the favourite quotes in New Screen.
 - Refresh page to get new quotes.
   
+
+<img align="center" alt="coding" width="250" src="https://github.com/balkrishnalamsal/codsoft_Intern_QuotesApp/raw/main/quotes.gif">
 
 
 
