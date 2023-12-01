@@ -13,7 +13,7 @@ class NavigationPage extends StatefulWidget {
 }
 
 class _MyAppState extends State<NavigationPage> {
-  int _currentIndex = 0;
+  
 
   List listofscreen = [HomeScreen(), FavouriteScreen()];
 
@@ -26,27 +26,31 @@ class _MyAppState extends State<NavigationPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: SalomonBottomBar(
-        currentIndex: _currentIndex,
-        onTap: (i) => setState(() => _currentIndex = i),
-        items: [
-          /// Home
-          SalomonBottomBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home"),
-            selectedColor: Colors.purple,
-          ),
+    return Consumer<quotesprovider>(
+      builder: (context,index,child) {
+        return Scaffold(
+          bottomNavigationBar: SalomonBottomBar(
+            currentIndex: index.currentIndex,
+            onTap: (i) => setState(() => index.currentIndex = i),
+            items: [
+              /// Home
+              SalomonBottomBarItem(
+                icon: Icon(Icons.home),
+                title: Text("Home"),
+                selectedColor: Colors.purple,
+              ),
 
-          /// Likes
-          SalomonBottomBarItem(
-            icon: Icon(Icons.favorite_border),
-            title: Text("Favourite"),
-            selectedColor: Colors.pink,
+              /// Likes
+              SalomonBottomBarItem(
+                icon: Icon(Icons.favorite_border),
+                title: Text("Favourite"),
+                selectedColor: Colors.pink,
+              ),
+            ],
           ),
-        ],
-      ),
-      body: listofscreen[_currentIndex],
+          body: listofscreen[index.currentIndex],
+        );
+      }
     );
   }
 }
